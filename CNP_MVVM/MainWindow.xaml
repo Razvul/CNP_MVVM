@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Button x:Name="Buton_Ceva"
+                Content="Ceva"
+                Height="30"
+                Width="100"
+                Click="Buton_Ceva_Click"/>
     </Grid>
 </Window>
