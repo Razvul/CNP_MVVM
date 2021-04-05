@@ -10,13 +10,25 @@
         Width="800">
 
   <Grid >
-    <Button x:Name="Add_Person_Test"
-            Width="100"
-            Height="30"
-            Content="Add Person"
-            Click="Add_Person_Test_Click">
+    <StackPanel>
+      <Button x:Name="Add_Person_Test"
+              Width="100"
+              Height="30"
+              Content="Add Person"
+              Click="Add_Person_Test_Click">
 
-    </Button>
+      </Button>
+
+      <Button x:Name="CNP_Test"
+              Width="100"
+              Height="30"
+              Content="CNP"
+              Click="CNP_Test_Click">
+      </Button>
+
+    </StackPanel>
+
+
   </Grid>
 
 </Window>

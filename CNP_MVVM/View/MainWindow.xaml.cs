@@ -31,5 +31,11 @@ namespace CNP_MVVM
             var a = new AddPersonWindow();
             a.ShowDialog();
         }
+
+        private void CNP_Test_Click(object sender, RoutedEventArgs e)
+        {
+            var a = new CNPView();
+            a.ShowDialog();
+        }
     }
 }
