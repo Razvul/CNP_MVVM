@@ -16,7 +16,8 @@ namespace CNP_MVVM.Model
         public string FirstName
         {
             get { return _firstName; }
-            set { 
+            set
+            { 
                 _firstName = value; 
                 OnPropertyChanged(FirstName);
             }
@@ -27,7 +28,8 @@ namespace CNP_MVVM.Model
         public string LastName
         {
             get { return _lastName; }
-            set { 
+            set
+            { 
                 _lastName = value; 
                 OnPropertyChanged(LastName);
             }

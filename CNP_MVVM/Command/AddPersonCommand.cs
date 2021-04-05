@@ -12,7 +12,7 @@ namespace CNP_MVVM.Command
         private readonly Action<object> _executeAction;
         private readonly Func<object, bool> _canExecute;
 
-        public AddPersonCommand(Action<object> executeAction, Func<object, bool> canExecute)
+        public AddPersonCommand(Action<object> executeAction, Func<object, bool> canExecute) // dependency injection
         {
             this._canExecute = canExecute;
             this._executeAction = executeAction;

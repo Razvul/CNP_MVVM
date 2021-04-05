@@ -24,6 +24,7 @@ namespace CNP_MVVM.View
         {
             InitializeComponent();
             this.DataContext = new CNPViewModel();
+            ComboBox_Gender.SelectedIndex = 0;
         }
     }
 }

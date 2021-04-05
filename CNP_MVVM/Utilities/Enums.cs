@@ -13,6 +13,5 @@ namespace CNP_MVVM.Utilities
             Masculin,
             Feminin
         }
-
     }
 }

@@ -38,7 +38,8 @@
                Grid.Column="1"
                Text="First Name"
                HorizontalAlignment="Left" />
-    <TextBox Grid.Row="1"
+    <TextBox x:Name="TextBox_FirstName" 
+             Grid.Row="1"
              Grid.Column="2"
              Width="100"
              HorizontalAlignment="Left"
@@ -47,7 +48,8 @@
                Grid.Column="1"
                Text="Last Name"
                HorizontalAlignment="Left" />
-    <TextBox Grid.Row="2"
+    <TextBox x:Name="TextBox_LastName"
+             Grid.Row="2"
              Grid.Column="2"
              Width="100"
              HorizontalAlignment="Left"

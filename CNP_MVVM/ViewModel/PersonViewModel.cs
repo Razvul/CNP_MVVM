@@ -31,17 +31,14 @@ namespace CNP_MVVM.ViewModel
             set
             {
                 _person = value;
-                OnPropertyChanged("Person");
+                OnPropertyChanged(nameof(Person));
             }
         }
 
         private ObservableCollection<Person> _persons;
         public ObservableCollection<Person> Persons
         {
-            get
-            {
-                return _persons;
-            }
+            get { return _persons; }
             set
             {
                 _persons = value;
