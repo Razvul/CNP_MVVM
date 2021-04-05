@@ -1,0 +1,34 @@
+﻿<Window x:Class="CNP_MVVM.View.CustomDateView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CNP_MVVM.View"
+        xmlns:pinoccio="clr-namespace:CNP_MVVM.Model"
+        mc:Ignorable="d"
+        Title="CustomDateView" Height="450" Width="800">
+    <Window.Resources>
+        <pinoccio:CustomDate x:Key="CustomDate"/>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <ComboBox x:Name="Combobox_Luni"
+                  Width="200"
+                  Height="25"
+                  ItemsSource="{Binding LuniSource}"
+                  SelectedIndex="7"/>
+        
+    </Grid>
+</Window>

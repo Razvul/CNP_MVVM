@@ -54,7 +54,7 @@ namespace CNP_MVVM.ViewModel
         {
             get
             {
-                if (_addPersonCommand == null)
+                if (_addPersonCommand == null)// creaza un element nou daca nu exista unul curent
                 {
                     _addPersonCommand = new AddPersonCommand(AddPersonExecute, CanAddPersonExecute);
                 }
@@ -62,9 +62,27 @@ namespace CNP_MVVM.ViewModel
             }
         }
 
+        //private ICommand _deletePersonCommand;
+
+        //public ICommand DeletePersonCommand
+        //{
+        //    get
+        //    {
+        //        Persons.Remove(DeletePersonCommand);
+        //        return _deletePersonCommand;
+        //    }
+        //   // set { _deletePersonCommand = value; }
+        //}
+
+
         private void AddPersonExecute(object parameter)
         {
             Persons.Add(Person);
+        }
+
+        private void DeletePerson(object parameter)
+        {
+            Persons.Remove(Person);
         }
 
         private bool CanAddPersonExecute(object parameter)

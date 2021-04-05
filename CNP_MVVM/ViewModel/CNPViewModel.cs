@@ -28,7 +28,7 @@ namespace CNP_MVVM.ViewModel
             set
             {
                 _cnp = value;
-                OnPropertyChanged(nameof(CNP));
+                OnPropertyChanged(nameof(CNP));// modificarile se fac automat
             }
         }
 
