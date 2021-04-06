@@ -23,7 +23,6 @@ namespace CNP_MVVM.View
         public CustomDateView()
         {
             InitializeComponent();
-            DataContext = new CustomDateViewModel();
         }
     }
 }
