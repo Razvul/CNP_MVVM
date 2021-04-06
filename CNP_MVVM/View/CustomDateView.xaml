@@ -5,11 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CNP_MVVM.View"
         xmlns:pinoccio="clr-namespace:CNP_MVVM.ViewModel"
+        xmlns:cEnums="clr-namespace:CNP_MVVM.Utilities"
         mc:Ignorable="d"
-        Title="CustomDateView" Height="450" Width="800">
+        Title="CustomDateView" Height="450" Width="800"
+        xmlns:System="clr-namespace:System;assembly=mscorlib">
     <Window.Resources>
         <pinoccio:CustomDateViewModel x:Key="CustomDateViewModel"/>
+        <ObjectDataProvider x:Key="JudeteFromEnums" MethodName="GetValues"
+                            ObjectType="{x:Type System:Enum}">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="cEnums:JudeteEnums"/>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+        
+        <ObjectDataProvider x:Key="LuniFromEnums" MethodName="GetValues"
+                            ObjectType="{x:Type System:Enum}">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="cEnums:LuniEnums"/>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+
+        <ObjectDataProvider x:Key="GenderFromEnums" MethodName="GetValues"
+                            ObjectType="{x:Type System:Enum}">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="cEnums:GenderEnums"/>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
     </Window.Resources>
+    
     <Grid DataContext="{Binding Source={StaticResource CustomDateViewModel}}">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
@@ -25,9 +48,25 @@
         </Grid.ColumnDefinitions>
 
         <ComboBox x:Name="Combobox_Luni"
+                  Grid.Row="0"
+                  Grid.Column="0"
                   Width="200"
                   Height="25"
-                  ItemsSource="{Binding LuniSource}"
+                  ItemsSource="{Binding Source={StaticResource LuniFromEnums}}"
                   SelectedIndex="6"/>
+        <ComboBox x:Name="Combobox_Judete"
+                  Grid.Row="0"
+                  Grid.Column="1"
+                  Width="200"
+                  Height="25"
+                  SelectedIndex="6"
+                  ItemsSource="{Binding Source={StaticResource JudeteFromEnums}}"/>
+        <ComboBox x:Name="Combobox_Gender"
+                  Grid.Row="0"
+                  Grid.Column="2"
+                  Width="200"
+                  Height="25"
+                  ItemsSource="{Binding Source={StaticResource GenderFromEnums}}"
+                  SelectedIndex="1"/>
     </Grid>
 </Window>

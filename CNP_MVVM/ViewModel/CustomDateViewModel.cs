@@ -30,24 +30,7 @@ namespace CNP_MVVM.ViewModel
                 OnPropertyChanged(nameof(CustomDate));
             }
         }
-
-        public ObservableCollection<Enums.Luni> LuniSource { get; set; } =
-            new ObservableCollection<Enums.Luni>
-            {
-                Enums.Luni.Ianuarie,
-                Enums.Luni.Februarie,
-                Enums.Luni.Martie,
-                Enums.Luni.Aprilie,
-                Enums.Luni.Mai,
-                Enums.Luni.Iunie,
-                Enums.Luni.Iulie,
-                Enums.Luni.August,
-                Enums.Luni.Septembrie,
-                Enums.Luni.Octombrie,
-                Enums.Luni.Noiembrie,
-                Enums.Luni.Decembrie
-            };
-
+                
         #region INotifyPropertyChanged Implementation
         public event PropertyChangedEventHandler PropertyChanged;
 
