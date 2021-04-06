@@ -12,9 +12,9 @@ namespace CNP_MVVM.Model
 {
     public class CustomDate : INotifyPropertyChanged
     {
-        private Enums.Zi _zi;
+        private ZiEnums _zi;
 
-        public Enums.Zi Zi
+        public ZiEnums Zi
         {
             get { return _zi; }
             set
@@ -24,9 +24,9 @@ namespace CNP_MVVM.Model
             }
         }
 
-        private Enums.Luni _luni;
+        private LuniEnums _luni;
 
-        public Enums.Luni Luni
+        public LuniEnums Luni
         {
             get { return _luni; }
             set

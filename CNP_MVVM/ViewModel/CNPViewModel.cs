@@ -32,11 +32,11 @@ namespace CNP_MVVM.ViewModel
             }
         }
 
-        public ObservableCollection<Enums.Gender> GenderSource { get; set; } =
-            new ObservableCollection<Enums.Gender>
+        public ObservableCollection<Enums_old.Gender> GenderSource { get; set; } =
+            new ObservableCollection<Enums_old.Gender>
             {
-                Enums.Gender.Masculin,
-                Enums.Gender.Feminin
+                Enums_old.Gender.Masculin,
+                Enums_old.Gender.Feminin
             };
 
 

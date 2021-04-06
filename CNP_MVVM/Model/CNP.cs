@@ -27,9 +27,9 @@ namespace CNP_MVVM.Model
         }
 
 
-        private Enums.Gender _gender;
+        private Enums_old.Gender _gender;
 
-        public Enums.Gender Gender
+        public Enums_old.Gender Gender
         {
             get { return _gender; }
             set
