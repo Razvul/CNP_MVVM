@@ -30,7 +30,44 @@ namespace CNP_MVVM.ViewModel
                 OnPropertyChanged(nameof(CustomDate));
             }
         }
-                
+
+        private void GetYear()
+        {
+            for (int i = 1900; i <= DateTime.Now.Year; i++)
+            {
+                _yearSource.Add(i);
+            }
+        }
+
+        private ObservableCollection<int> _yearSource;
+
+        public ObservableCollection<int> YearSource
+        {
+            get
+            {
+                if(_yearSource==null)
+                {
+                    _yearSource = new ObservableCollection<int>();
+                    GetYear();
+                }
+                return _yearSource;
+            }
+            set
+            {
+                _yearSource = value;
+                OnPropertyChanged(nameof(YearSource));
+            }
+        }
+
+        private ObservableCollection<int> _daySource;
+
+        public ObservableCollection<int> DaySource
+        {
+            get { return _daySource; }
+            set { _daySource = value; }
+        }
+
+
         #region INotifyPropertyChanged Implementation
         public event PropertyChangedEventHandler PropertyChanged;
 
