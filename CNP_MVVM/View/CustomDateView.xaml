@@ -35,7 +35,6 @@
     </Window.Resources>
 
     <Grid>
-        <!--DataContext="{Binding Source={StaticResource CustomDateViewModel}}"-->
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
@@ -56,30 +55,34 @@
             <Label Content="Gender"
                    Width="100"
                    Height="25"/>
-            <ComboBox x:Name="Combobox_Gender"
-                  Width="100"
-                  Height="25"
-                  ItemsSource="{Binding Source={StaticResource GenderFromEnums}}"
-                  SelectedIndex="1"/>
+            <ComboBox
+                x:Name="Combobox_Gender"
+                Width="100"
+                Height="25"
+                ItemsSource="{Binding Source={StaticResource GenderFromEnums}}"
+                SelectedIndex="1"/>
         </StackPanel>
 
         <StackPanel Grid.Row="0"
                     Grid.Column="1">
-            <Label Content="Year"
-                   Width="100"
-                   Height="25"/>
-            <ComboBox x:Name="Combobox_An"
-                  Width="100"
-                  Height="25"
-                  SelectedIndex="93"
-                  ItemsSource="{Binding Source={StaticResource CustomDateViewModel}, Path=YearSource}"/>
+            <Label
+                Content="Year"
+                Width="100"
+                Height="25"/>
+            <ComboBox
+                x:Name="Combobox_An"
+                Width="100"
+                Height="25"
+                SelectedIndex="93"
+                ItemsSource="{Binding Source={StaticResource CustomDateViewModel}, Path=YearSource}"/>
         </StackPanel>
 
         <StackPanel Grid.Row="0"
                     Grid.Column="2">
-            <Label Content="Months"
-                   Width="100"
-                   Height="25"/>
+            <Label
+                Content="Months"
+                Width="100"
+                Height="25"/>
             <ComboBox 
                 x:Name="Combobox_Luni"
                 Width="100"
@@ -90,25 +93,30 @@
 
         <StackPanel Grid.Row="0"
                     Grid.Column="3">
-            <Label Content="Days"
-                   Width="100"
-                   Height="25"/>
-            <ComboBox x:Name="Combobox_Zile"
-                  Width="100"
-                  Height="25"
-                  SelectedIndex="6"/>
+            <Label
+                Content="Days"
+                Width="100"
+                Height="25"/>
+            <ComboBox
+                x:Name="Combobox_Zile"
+                Width="100"
+                Height="25"
+                ItemsSource="{Binding Source={StaticResource CustomDateViewModel}, Path=SelectedItemLuni}"
+                SelectedIndex="9"/>
         </StackPanel>
 
         <StackPanel Grid.Row="0"
                     Grid.Column="4">
-            <Label Content="Counties"
-                   Width="100"
-                   Height="25"/>
-            <ComboBox x:Name="Combobox_Judete"
-                  Width="100"
-                  Height="25"
-                  SelectedIndex="6"
-                  ItemsSource="{Binding Source={StaticResource JudeteFromEnums}}"/>
+            <Label
+                Content="Counties"
+                Width="100"
+                Height="25"/>
+            <ComboBox
+                x:Name="Combobox_Judete"
+                Width="100"
+                Height="25"
+                SelectedIndex="6"
+                ItemsSource="{Binding Source={StaticResource JudeteFromEnums}}"/>
         </StackPanel>
     </Grid>
 </Window>
