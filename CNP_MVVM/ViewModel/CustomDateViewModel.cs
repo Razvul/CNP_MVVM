@@ -72,6 +72,7 @@ namespace CNP_MVVM.ViewModel
             set
             {
                 _selectedItemLuni = value;
+                GetDays();
             }
         }
 
@@ -90,7 +91,9 @@ namespace CNP_MVVM.ViewModel
 
         private void GetDays() //primeste numarul maxim de zile dintr-o luna
         {
-            for (int i = 1900; i <= GetMaxDays(SelectedItemLuni); i++)
+            var maxDays = GetMaxDays(_selectedItemLuni);
+            _daySource.Clear();
+            for (int i = 1; i <= maxDays; i++)
             {
                 _daySource.Add(i);
             }
