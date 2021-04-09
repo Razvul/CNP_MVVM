@@ -59,5 +59,4 @@ namespace CNP_MVVM.Model
         }
         #endregion
     }
-
 }

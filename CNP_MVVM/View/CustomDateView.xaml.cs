@@ -24,5 +24,14 @@ namespace CNP_MVVM.View
         {
             InitializeComponent();
         }
+
+        private void Combobox_Luni_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var a = sender as ComboBox;
+            var b = a.SelectedIndex;
+
+
+            var c = 2;
+        }
     }
 }

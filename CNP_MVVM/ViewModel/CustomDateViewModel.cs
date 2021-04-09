@@ -67,6 +67,7 @@ namespace CNP_MVVM.ViewModel
         {
             get
             {
+                
                 return _selectedItemLuni;
             }
             set
@@ -75,24 +76,12 @@ namespace CNP_MVVM.ViewModel
                 GetDays();
             }
         }
-
-        private int GetMaxDays(int selectedIndex) // primeste ca argument SelectedItemLuni
-        {
-            switch (selectedIndex)
-            {
-                case 1: return 29;
-                case 3:
-                case 5:
-                case 8:
-                case 10: return 30;
-                default: return 31;
-            }
-        } // returneaza numarul maxim de zile dintr-o luna
-
+                
         private void GetDays() //primeste numarul maxim de zile dintr-o luna
         {
-            var maxDays = GetMaxDays(_selectedItemLuni);
+            var maxDays = Utility.GetMaxDays(_selectedItemLuni);
             _daySource.Clear();
+
             for (int i = 1; i <= maxDays; i++)
             {
                 _daySource.Add(i);
@@ -108,7 +97,7 @@ namespace CNP_MVVM.ViewModel
                 if (_daySource == null)//umple lista daca este goala
                 {
                     _daySource = new ObservableCollection<int>();
-                    GetDays();
+                    
                 }
                 return _daySource;
             }
