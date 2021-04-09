@@ -74,6 +74,7 @@ namespace CNP_MVVM.ViewModel
             {
                 _selectedItemLuni = value;
                 GetDays();
+                OnPropertyChanged(nameof(_daySource));
             }
         }
                 
