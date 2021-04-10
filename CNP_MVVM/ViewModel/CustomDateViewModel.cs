@@ -19,6 +19,7 @@ namespace CNP_MVVM.ViewModel
            // CustomDate = new CustomDate();
         }
 
+        private int _indexZiAnterior;
         private CustomDate _customDate;
 
         public CustomDate CustomDate
@@ -61,33 +62,59 @@ namespace CNP_MVVM.ViewModel
         }
         #endregion
 
-        #region Days
-        private int _selectedItemLuni;
-        public int SelectedItemLuni // primeste selected index de la combobox luni
+        #region Months
+        private int _selectedIndexLuni;
+        public int SelectedIndexLuni // primeste selected index de la combobox luni
         {
             get
             {
-                
-                return _selectedItemLuni;
+                return _selectedIndexLuni;
             }
             set
             {
-                _selectedItemLuni = value;
+                _selectedIndexLuni = value;
                 GetDays();
-                OnPropertyChanged(nameof(_daySource));
+                OnPropertyChanged(nameof(SelectedIndexLuni));
             }
         }
-                
+        #endregion
+
+        #region Days
+        private int _selectedIndexZile;
+        public int SelectedIndexZile // primeste selected index de la combobox luni
+        {
+            get
+            {
+                return _selectedIndexZile;
+            }
+            set
+            {
+                _indexZiAnterior = _selectedIndexZile;
+                _selectedIndexZile = value;
+
+                OnPropertyChanged(nameof(SelectedIndexZile));
+            }
+        }
+
         private void GetDays() //primeste numarul maxim de zile dintr-o luna
         {
-            var maxDays = Utility.GetMaxDays(_selectedItemLuni);
+            var maxDays = Utility.GetMaxDays(_selectedIndexLuni);
             _daySource.Clear();
 
             for (int i = 1; i <= maxDays; i++)
             {
                 _daySource.Add(i);
             }
-        } //si umple lista _daySource cu numere de la 1 la GetMaxDays(SelectedItemLuni)
+
+            if (_indexZiAnterior + 1 > maxDays)
+            {
+                SelectedIndexZile = 0;
+            }
+            else
+            {
+                SelectedIndexZile = _indexZiAnterior;
+            }
+       } //si umple lista _daySource cu numere de la 1 la GetMaxDays(SelectedItemLuni)
 
         private ObservableCollection<int> _daySource;
 
@@ -98,14 +125,14 @@ namespace CNP_MVVM.ViewModel
                 if (_daySource == null)//umple lista daca este goala
                 {
                     _daySource = new ObservableCollection<int>();
-                    
+                    GetDays();
                 }
                 return _daySource;
             }
             set
             {
                 _daySource = value;
-                OnPropertyChanged(nameof(_daySource));
+                OnPropertyChanged(nameof(DaySource));
             }
         }
         #endregion
