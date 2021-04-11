@@ -41,7 +41,8 @@ namespace CNP_MVVM.ViewModel
             set
             {
                 _gender = value;
-                OnPropertyChanged(Gender);
+                GenerateCNP();
+                OnPropertyChanged(nameof(Gender));
             }
         }
 
@@ -84,7 +85,8 @@ namespace CNP_MVVM.ViewModel
             set
             {
                 _year = value;
-                OnPropertyChanged(Year);
+                GenerateCNP();
+                OnPropertyChanged(nameof(Year));
             }
         }
 
@@ -113,7 +115,8 @@ namespace CNP_MVVM.ViewModel
             set
             {
                 _month = value;
-                OnPropertyChanged(Month);
+                GenerateCNP();
+                OnPropertyChanged(nameof(Month));
             }
         }
 
@@ -139,22 +142,42 @@ namespace CNP_MVVM.ViewModel
         private void GetDays() //primeste numarul maxim de zile dintr-o luna
         {
             var maxDays = Utility.GetMaxDays(_selectedIndexLuni);
-            _daySource.Clear();
 
-            for (int i = 1; i <= maxDays; i++)
+            if (_daySource.Count == 0)
             {
-                _daySource.Add(i);
-            }
-
-            if (_indexZiAnterior + 1 > maxDays)
-            {
-                SelectedIndexZile = maxDays - 1;
+                for (int i = 1; i <= maxDays; i++)
+                {
+                    _daySource.Add(i);
+                }
             }
             else
             {
-                SelectedIndexZile = _indexZiAnterior;
+                if (maxDays < _daySource.Count)
+                {
+                    for (int i = _daySource.Count; i > maxDays; i--)
+                    {
+                        _daySource.Remove(i);
+                    }
+                }
+                else
+                {
+                    for (int i = _daySource.Count + 1; i <= maxDays; i++)
+                    {
+                        _daySource.Add(i);
+                    }
+                }
             }
-       } //si umple lista _daySource cu numere de la 1 la GetMaxDays(SelectedItemLuni)
+
+            // aici nu imi mai trebuie asta pt ca nu maiu fac clear de _daySource
+            //if (_indexZiAnterior + 1 > maxDays)
+            //{
+            //    SelectedIndexZile = maxDays - 1;
+            //}
+            //else
+            //{
+            //    SelectedIndexZile = 0;
+            //}
+        } //si umple lista _daySource cu numere de la 1 la GetMaxDays(SelectedItemLuni)
 
         private ObservableCollection<int> _daySource;
 
@@ -184,7 +207,8 @@ namespace CNP_MVVM.ViewModel
             set
             {
                 _day = value;
-                OnPropertyChanged(Day);
+                GenerateCNP();
+                OnPropertyChanged(nameof(Day));
             }
         }
 
@@ -199,8 +223,9 @@ namespace CNP_MVVM.ViewModel
             set
             {
                 _judet = value;
-                OnPropertyChanged(Judet);
-           }
+                GenerateCNP();
+                OnPropertyChanged(nameof(Judet));
+            }
         }
         #endregion
 
@@ -211,35 +236,40 @@ namespace CNP_MVVM.ViewModel
         {
             get
             {
-
                 return _cnp;
             }
             set
             {
                 _cnp = value;
-                //OnPropertyChanged(CNP);
+                OnPropertyChanged(nameof(CNP));
             }
         }
-                
-        //private void Tipo()
-        //{
-        //    var item = Utility.GetCC
-        //        (Utility.GetSex(Combobox_Gender.Text, Combobox_An.Text),
-        //        Utility.GetYear(Combobox_An.Text),
-        //        Utility.GetMonth(Combobox_Luni.Text),
-        //        Utility.GetZi(Combobox_Zile.Text),
-        //        Utility.GetJudet(Combobox_Judete.Text),
-        //        Utility.GetNNN());
 
-        //    TextBox_CNP.Text = Utility.GetCNP
-        //        (Utility.GetSex(Combobox_Gender.Text, Combobox_An.Text),
-        //        Utility.GetYear(Combobox_An.Text),
-        //        Utility.GetMonth(Combobox_Luni.Text),
-        //        Utility.GetZi(Combobox_Zile.Text),
-        //        Utility.GetJudet(Combobox_Judete.Text),
-        //        Utility.GetNNN(),
-        //        item);
-        //}
+        private void GenerateCNP()
+        {
+            if (_gender == null || _year == null || _month == null || _day == null || _judet == null)
+            {
+                return;
+            }
+
+            var item = Utility.GetCC
+                (Utility.GetSex(_gender, _year),
+                Utility.GetYear(_year),
+                Utility.GetMonth(_month),
+                Utility.GetZi(_day),
+                Utility.GetJudet(_judet),
+                Utility.GetNNN());
+
+
+            CNP = Utility.GetCNP(
+                Utility.GetSex(_gender, _year),
+                Utility.GetYear(_year),
+                Utility.GetMonth(_month),
+                Utility.GetZi(_day),
+                Utility.GetJudet(_judet),
+                Utility.GetNNN(),
+                item);
+        }
 
         #endregion
 

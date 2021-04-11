@@ -32,25 +32,5 @@ namespace CNP_MVVM.View
             var b = a.SelectedIndex;// cum fac sa incarce din nou combobox zile?
             var c = Utilities.Utility.GetMaxDays(b);//cum il trimit?
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            var item = Utility.GetCC
-                (Utility.GetSex(Combobox_Gender.Text, Combobox_An.Text),
-                Utility.GetYear(Combobox_An.Text),
-                Utility.GetMonth(Combobox_Luni.Text),
-                Utility.GetZi(Combobox_Zile.Text),
-                Utility.GetJudet(Combobox_Judete.Text),
-                Utility.GetNNN());
-
-            TextBox_CNP.Text = Utility.GetCNP
-                (Utility.GetSex(Combobox_Gender.Text, Combobox_An.Text),
-                Utility.GetYear(Combobox_An.Text),
-                Utility.GetMonth(Combobox_Luni.Text),
-                Utility.GetZi(Combobox_Zile.Text),
-                Utility.GetJudet(Combobox_Judete.Text),
-                Utility.GetNNN(),
-                item);
-        }
     }
 }
