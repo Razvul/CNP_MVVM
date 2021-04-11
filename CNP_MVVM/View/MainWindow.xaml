@@ -11,23 +11,17 @@
 
     <Grid >
         <StackPanel>
-            <Button x:Name="Add_Person_Test"
+            <Button x:Name="Buton_Add_Person_Test"
               Width="100"
               Height="30"
               Content="Add Person"
               Click="Add_Person_Test_Click">
             </Button>
 
-            <Button x:Name="CNP_Test"
+            <Button x:Name="Buton_CNP"
               Width="100"
               Height="30"
               Content="CNP"
-              Click="CNP_Test_Click">
-            </Button>
-            <Button x:Name="Data"
-              Width="100"
-              Height="30"
-              Content="Data"
               Click="Data_Click">
             </Button>
         </StackPanel>
