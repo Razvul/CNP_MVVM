@@ -108,7 +108,7 @@ namespace CNP_MVVM.ViewModel
 
             if (_indexZiAnterior + 1 > maxDays)
             {
-                SelectedIndexZile = 0;
+                SelectedIndexZile = maxDays - 1;
             }
             else
             {
