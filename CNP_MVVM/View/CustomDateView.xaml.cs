@@ -25,12 +25,5 @@ namespace CNP_MVVM.View
         {
             InitializeComponent();
         }
-
-        private void Combobox_Luni_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            var a = sender as ComboBox;
-            var b = a.SelectedIndex;// cum fac sa incarce din nou combobox zile?
-            var c = Utilities.Utility.GetMaxDays(b);//cum il trimit?
-        }
     }
 }

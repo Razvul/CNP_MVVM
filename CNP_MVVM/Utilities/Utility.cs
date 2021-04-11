@@ -245,22 +245,22 @@ namespace CNP_MVVM.Utilities
                 case "bucuresti":
                     result = "40";
                     break;
-                case "bucuresti 1":
+                case "bucuresti1":
                     result = "41";
                     break;
                 case "bucuresti2":
                     result = "42";
                     break;
-                case "bucuresti 3":
+                case "bucuresti3":
                     result = "43";
                     break;
-                case "bucuresti 4":
+                case "bucuresti4":
                     result = "44";
                     break;
-                case "bucuresti 5":
+                case "bucuresti5":
                     result = "45";
                     break;
-                case "bucuresti 6":
+                case "bucuresti6":
                     result = "46";
                     break;
                 case "calarasi":

@@ -19,7 +19,6 @@ namespace CNP_MVVM.ViewModel
            // CustomDate = new CustomDate();
         }
 
-        private int _indexZiAnterior;
         private CustomDate _customDate;
 
         public CustomDate CustomDate
@@ -132,7 +131,6 @@ namespace CNP_MVVM.ViewModel
             }
             set
             {
-                _indexZiAnterior = _selectedIndexZile;
                 _selectedIndexZile = value;
 
                 OnPropertyChanged(nameof(SelectedIndexZile));
@@ -167,7 +165,7 @@ namespace CNP_MVVM.ViewModel
                     }
                 }
             }
-
+            
             // aici nu imi mai trebuie asta pt ca nu maiu fac clear de _daySource
             //if (_indexZiAnterior + 1 > maxDays)
             //{

@@ -90,7 +90,6 @@
                 Width="100"
                 Height="25"
                 ItemsSource="{Binding Source={StaticResource LuniFromEnums}}"
-                SelectionChanged="Combobox_Luni_SelectionChanged"
                 SelectedItem="{Binding Source={StaticResource CustomDateViewModel}, Path=Month}"
                 SelectedIndex="{Binding Source={StaticResource CustomDateViewModel}, Path=SelectedIndexLuni}"/>
         </StackPanel>
@@ -130,8 +129,7 @@
             Text="{Binding Source={StaticResource CustomDateViewModel}, Path=CNP}"
             Grid.Row="1"
             Grid.Column="0"
-            Grid.ColumnSpan="3"
-            Width="400"
+            Width="100"
             Height="25"
             HorizontalAlignment="Center"
             VerticalContentAlignment="Center"/>
