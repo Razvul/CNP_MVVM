@@ -32,6 +32,21 @@ namespace CNP_MVVM.ViewModel
             }
         }
 
+        #region Gender
+        private string _gender;
+
+        public string Gender
+        {
+            get { return _gender; }
+            set
+            {
+                _gender = value;
+                OnPropertyChanged(Gender);
+            }
+        }
+
+        #endregion
+
         #region Years
         private void GetYear()
         {
@@ -60,6 +75,19 @@ namespace CNP_MVVM.ViewModel
                 OnPropertyChanged(nameof(YearSource));
             }
         }
+
+        private string _year;
+
+        public string Year
+        {
+            get { return _year; }
+            set
+            {
+                _year = value;
+                OnPropertyChanged(Year);
+            }
+        }
+
         #endregion
 
         #region Months
@@ -77,6 +105,18 @@ namespace CNP_MVVM.ViewModel
                 OnPropertyChanged(nameof(SelectedIndexLuni));
             }
         }
+        private string _month;
+
+        public string Month
+        {
+            get { return _month; }
+            set
+            {
+                _month = value;
+                OnPropertyChanged(Month);
+            }
+        }
+
         #endregion
 
         #region Days
@@ -135,6 +175,72 @@ namespace CNP_MVVM.ViewModel
                 OnPropertyChanged(nameof(DaySource));
             }
         }
+
+        private string _day;
+
+        public string Day
+        {
+            get { return _day; }
+            set
+            {
+                _day = value;
+                OnPropertyChanged(Day);
+            }
+        }
+
+        #endregion
+
+        #region Judete
+        private string _judet;
+
+        public string Judet
+        {
+            get { return _judet; }
+            set
+            {
+                _judet = value;
+                OnPropertyChanged(Judet);
+           }
+        }
+        #endregion
+
+        #region CNP
+        private string _cnp;
+
+        public string CNP
+        {
+            get
+            {
+
+                return _cnp;
+            }
+            set
+            {
+                _cnp = value;
+                //OnPropertyChanged(CNP);
+            }
+        }
+                
+        //private void Tipo()
+        //{
+        //    var item = Utility.GetCC
+        //        (Utility.GetSex(Combobox_Gender.Text, Combobox_An.Text),
+        //        Utility.GetYear(Combobox_An.Text),
+        //        Utility.GetMonth(Combobox_Luni.Text),
+        //        Utility.GetZi(Combobox_Zile.Text),
+        //        Utility.GetJudet(Combobox_Judete.Text),
+        //        Utility.GetNNN());
+
+        //    TextBox_CNP.Text = Utility.GetCNP
+        //        (Utility.GetSex(Combobox_Gender.Text, Combobox_An.Text),
+        //        Utility.GetYear(Combobox_An.Text),
+        //        Utility.GetMonth(Combobox_Luni.Text),
+        //        Utility.GetZi(Combobox_Zile.Text),
+        //        Utility.GetJudet(Combobox_Judete.Text),
+        //        Utility.GetNNN(),
+        //        item);
+        //}
+
         #endregion
 
         #region INotifyPropertyChanged Implementation

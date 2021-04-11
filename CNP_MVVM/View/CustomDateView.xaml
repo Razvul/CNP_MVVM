@@ -60,7 +60,8 @@
                 Width="100"
                 Height="25"
                 ItemsSource="{Binding Source={StaticResource GenderFromEnums}}"
-                SelectedIndex="1"/>
+                SelectedIndex="1"
+                SelectedItem="{Binding Source={StaticResource CustomDateViewModel}, Path=Gender}"/>
         </StackPanel>
 
         <StackPanel Grid.Row="0"
@@ -74,6 +75,7 @@
                 Width="100"
                 Height="25"
                 SelectedIndex="93"
+                SelectedItem="{Binding Source={StaticResource CustomDateViewModel}, Path=Year}"
                 ItemsSource="{Binding Source={StaticResource CustomDateViewModel}, Path=YearSource}"/>
         </StackPanel>
 
@@ -89,6 +91,7 @@
                 Height="25"
                 ItemsSource="{Binding Source={StaticResource LuniFromEnums}}"
                 SelectionChanged="Combobox_Luni_SelectionChanged"
+                SelectedItem="{Binding Source={StaticResource CustomDateViewModel}, Path=Month}"
                 SelectedIndex="{Binding Source={StaticResource CustomDateViewModel}, Path=SelectedIndexLuni}"/>
         </StackPanel>
 
@@ -102,6 +105,7 @@
                 x:Name="Combobox_Zile"
                 Width="100"
                 Height="25"
+                SelectedItem="{Binding Source={StaticResource CustomDateViewModel}, Path=Day}"
                 ItemsSource="{Binding Source={StaticResource CustomDateViewModel}, Path=DaySource}"
                 SelectedIndex="{Binding Source={StaticResource CustomDateViewModel}, Path=SelectedIndexZile}"/>
         </StackPanel>
@@ -117,7 +121,25 @@
                 Width="100"
                 Height="25"
                 SelectedIndex="6"
+                SelectedItem="{Binding Source={StaticResource CustomDateViewModel}, Path=Judet}"
                 ItemsSource="{Binding Source={StaticResource JudeteFromEnums}}"/>
         </StackPanel>
+
+        <TextBox
+            x:Name="TextBox_CNP"
+            Text="{Binding Source={StaticResource CustomDateViewModel}, Path=CNP}"
+            Grid.Row="1"
+            Grid.Column="0"
+            Width="100"
+            Height="25"
+            HorizontalAlignment="Center"
+            VerticalContentAlignment="Center"/>
+        <Button
+            Grid.Row="1"
+            Grid.Column="1"
+            Width="100"
+            Height="25"
+            Content="Creare"
+            Click="Button_Click"/>
     </Grid>
 </Window>
