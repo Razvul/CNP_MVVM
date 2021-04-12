@@ -11,18 +11,27 @@
 
     <Grid >
         <StackPanel>
-            <Button x:Name="Buton_Add_Person_Test"
-              Width="100"
-              Height="30"
-              Content="Add Person"
-              Click="Add_Person_Test_Click">
+            <Button
+                x:Name="Buton_Add_Person_Test"
+                Width="100"
+                Height="30"
+                Content="Add Person"
+                Click="Add_Person_Test_Click">
             </Button>
 
-            <Button x:Name="Buton_CNP"
-              Width="100"
-              Height="30"
-              Content="CNP"
-              Click="Data_Click">
+            <Button
+                x:Name="Buton_CNP"
+                Width="100"
+                Height="30"
+                Content="CNP"
+                Click="Data_Click">
+            </Button>
+            <Button
+                x:Name="Buton_Adauga"
+                Width="100"
+                Height="30"
+                Content="Adauga"
+                Click="Buton_Adauga_Click">
             </Button>
         </StackPanel>
     </Grid>

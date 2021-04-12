@@ -37,5 +37,11 @@ namespace CNP_MVVM
             var a = new CustomDateView();
             a.ShowDialog();
         }
+
+        private void Buton_Adauga_Click(object sender, RoutedEventArgs e)
+        {
+            var h = new UserList();
+            h.ShowDialog();
+        }
     }
 }
