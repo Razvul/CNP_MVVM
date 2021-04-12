@@ -76,12 +76,18 @@
     <Compile Include="Command\AddPersonCommand.cs" />
     <Compile Include="Model\CNP.cs" />
     <Compile Include="Model\CustomDate.cs" />
+    <Compile Include="Utilities\AddressClass.cs" />
     <Compile Include="Utilities\Enums_old.cs" />
     <Compile Include="Utilities\CustomEnums.cs" />
+    <Compile Include="Utilities\Person.cs" />
+    <Compile Include="Utilities\User.cs" />
     <Compile Include="Utilities\Utility.cs" />
     <Compile Include="ViewModel\CNPViewModel.cs" />
     <Compile Include="ViewModel\CustomDateViewModel.cs" />
     <Compile Include="ViewModel\PersonViewModel.cs" />
+    <Compile Include="View\UserList.xaml.cs">
+      <DependentUpon>UserList.xaml</DependentUpon>
+    </Compile>
     <Page Include="View\CustomDateView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -108,6 +114,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\UserList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Person.cs" />
