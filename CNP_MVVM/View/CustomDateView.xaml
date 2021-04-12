@@ -31,7 +31,6 @@
                 <x:Type TypeName="cEnums:GenderEnums"/>
             </ObjectDataProvider.MethodParameters>
         </ObjectDataProvider>
-
     </Window.Resources>
 
     <Grid>

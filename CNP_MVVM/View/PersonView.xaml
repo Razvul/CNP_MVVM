@@ -5,10 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CNP_MVVM.View"
         xmlns:viewModel="clr-namespace:CNP_MVVM.ViewModel"
-        mc:Ignorable="d"
-        Title="Add Person" 
-        Height="450" 
-        Width="800">
+        mc:Ignorable="d" Title="Add Person" Height="450" Width="800">
 
   <Window.Resources>
         <viewModel:PersonViewModel x:Key="PersonViewModel" />
@@ -68,22 +65,22 @@
               ItemsSource="{Binding Source={StaticResource CNPViewModel}, Path=GenderSource}"
               SelectedIndex="0"/>
     <ListView ItemsSource="{Binding Persons}"
-              Width="Auto"
+              Width="350"
               Grid.Row="5"
-              Grid.Column="2">
+              Grid.Column="2"
+              HorizontalAlignment="Left">
       <ListView.View>
         <GridView>
           <GridViewColumn Header="First Name"
                           DisplayMemberBinding="{Binding FirstName}"
-                          Width="Auto" />
+                          Width="100" />
           <GridViewColumn  Header="Last Name"
                            DisplayMemberBinding="{Binding LastName}"
-                           Width="Auto" />
+                           Width="100" />
           <GridViewColumn  Header="Full Name"
                            DisplayMemberBinding="{Binding FullName}"
-                           Width="Auto" />
-
-        </GridView>
+                           Width="100" />
+          </GridView>
       </ListView.View>
     </ListView>
   </Grid>

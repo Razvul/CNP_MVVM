@@ -132,7 +132,6 @@ namespace CNP_MVVM.ViewModel
             set
             {
                 _selectedIndexZile = value;
-
                 OnPropertyChanged(nameof(SelectedIndexZile));
             }
         }
