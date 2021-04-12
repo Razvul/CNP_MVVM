@@ -26,6 +26,7 @@ namespace CNP_MVVM
             InitializeComponent();
         }
 
+        #region Butoane
         private void Add_Person_Test_Click(object sender, RoutedEventArgs e)
         {
             var a = new AddPersonWindow();
@@ -43,5 +44,6 @@ namespace CNP_MVVM
             var h = new UserList();
             h.ShowDialog();
         }
+        #endregion
     }
 }

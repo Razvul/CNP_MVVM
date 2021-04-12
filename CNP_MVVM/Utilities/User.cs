@@ -10,7 +10,7 @@ namespace CNP_MVVM.Utilities
     {
         public string Id { get; set; }
         public string DisplayValue { get; set; }
-        public Person Person { get; set; }
+        public PersonClass Person { get; set; }
         public AddressClass Address { get; set; }
     }
 }

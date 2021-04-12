@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Runtime.CompilerServices;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
@@ -20,17 +21,9 @@ namespace CNP_MVVM.View
     /// </summary>
     public partial class UserList : Window
     {
-        private User _user;
+        private readonly User _user;
         //private readonly UserDatabase _userDatabase = UserDatabase.GetInstance();
         private readonly bool _isNewUser = false;
-
-        public UserList()
-        {
-            InitializeComponent();
-            _isNewUser = true;
-            Button_Delete.Visibility = Visibility.Hidden;
-            Button_Update.Visibility = Visibility.Hidden;
-        }
 
         //public UserList(User user)
         //{
@@ -39,5 +32,13 @@ namespace CNP_MVVM.View
         //    Button_Add.Visibility = Visibility.Hidden;
         //    this.DataContext = DataContext;
         //}
+
+        public UserList()
+        {
+            InitializeComponent();
+            _isNewUser = true;
+            Button_Delete.Visibility = Visibility.Hidden;
+            Button_Update.Visibility = Visibility.Hidden;
+        }       
     }
 }
