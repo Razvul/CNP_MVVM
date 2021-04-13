@@ -257,7 +257,6 @@ namespace CNP_MVVM.ViewModel
                 Utility.GetJudet(_judet),
                 Utility.GetNNN());
 
-
             CNP = Utility.GetCNP(
                 Utility.GetSex(_gender, _year),
                 Utility.GetYear(_year),
@@ -267,7 +266,6 @@ namespace CNP_MVVM.ViewModel
                 Utility.GetNNN(),
                 item);
         }
-
         #endregion
 
         #region INotifyPropertyChanged Implementation

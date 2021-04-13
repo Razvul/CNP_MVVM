@@ -76,7 +76,7 @@
     <Compile Include="Command\AddPersonCommand.cs" />
     <Compile Include="Model\CNP.cs" />
     <Compile Include="Model\CustomDate.cs" />
-    <Compile Include="Model\UserDetailsFull.cs" />
+    <Compile Include="Model\UserList.cs" />
     <Compile Include="Utilities\AddressClass.cs" />
     <Compile Include="Utilities\Enums_old.cs" />
     <Compile Include="Utilities\CustomEnums.cs" />
@@ -87,6 +87,7 @@
     <Compile Include="ViewModel\CNPViewModel.cs" />
     <Compile Include="ViewModel\CustomDateViewModel.cs" />
     <Compile Include="ViewModel\PersonViewModel.cs" />
+    <Compile Include="ViewModel\UserListViewModel.cs" />
     <Compile Include="View\UserListView.xaml.cs">
       <DependentUpon>UserListView.xaml</DependentUpon>
     </Compile>

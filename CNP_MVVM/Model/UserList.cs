@@ -10,7 +10,7 @@ using CNP_MVVM.Utilities;
 
 namespace CNP_MVVM.Model
 {
-    class UserDetailsFull : INotifyPropertyChanged
+    class UserList : INotifyPropertyChanged
     {
 
         #region Persoana
