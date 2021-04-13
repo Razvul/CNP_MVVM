@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CNP_MVVM.View;
+using CNP_MVVM.Utilities;
 
 namespace CNP_MVVM
 {
@@ -21,6 +22,8 @@ namespace CNP_MVVM
     /// </summary>
     public partial class MainWindow : Window
     {
+        private UserDatabase _userDatabase = UserDatabase.GetInstance();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -43,6 +46,13 @@ namespace CNP_MVVM
         {
             var h = new UserList();
             h.ShowDialog();
+        }
+
+        private void Buton_Detalii_Click(object sender, RoutedEventArgs e)
+        {
+            var SelectedUser = (User)listBox_Users.SelectedItem;
+            var gg = new UserList(SelectedUser);
+            gg.ShowDialog();
         }
         #endregion
     }

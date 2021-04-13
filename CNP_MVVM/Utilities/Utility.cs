@@ -327,5 +327,10 @@ namespace CNP_MVVM.Utilities
         {
             return $"{SEX}{AN}{LUNA}{ZI}{JUDET}{NNN}{CC}";
         }
+
+        public static Guid GetNewId()
+        {
+            return Guid.NewGuid();
+        }
     }
 }

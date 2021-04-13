@@ -149,6 +149,18 @@ namespace CNP_MVVM.Model
         }
         #endregion
 
+        private User _utilizator;
+
+        public User Utilizator
+        {
+            get { return _utilizator; }
+            set
+            {
+                _utilizator = value;
+                OnPropertyChanged(nameof(Utilizator));
+            }
+        }
+
         #region INotifyPropertyChanged Implementation
         public event PropertyChangedEventHandler PropertyChanged;
 

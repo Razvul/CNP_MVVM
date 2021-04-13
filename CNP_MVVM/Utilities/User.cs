@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CNP_MVVM.Utilities
 {
-    class User
+    public class User
     {
         public string Id { get; set; }
         public string DisplayValue { get; set; }

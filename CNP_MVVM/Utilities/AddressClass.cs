@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CNP_MVVM.Utilities
 {
-    class AddressClass
+    public class AddressClass
     {
         public string Oras { get; set; }
         public string Strada { get; set; }

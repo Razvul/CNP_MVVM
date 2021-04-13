@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CNP_MVVM.Utilities
 {
-    class PersonClass
+    public class PersonClass
     {
         public string Nume { get; set; }
         public string Prenume { get; set; }

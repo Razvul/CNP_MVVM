@@ -23,6 +23,7 @@
                 Content="CNP"
                 Click="Data_Click">
             </Button>
+            
             <Button
                 x:Name="Buton_Adauga"
                 Width="100"
@@ -30,6 +31,19 @@
                 Content="Adauga"
                 Click="Buton_Adauga_Click">
             </Button>
+
+            <Button
+                x:Name="Buton_Detalii"
+                Width="100"
+                Height="30"
+                Content="Detalii"
+                Click="Buton_Detalii_Click">
+            </Button>
+
+            <ListBox
+                x:Name="listBox_Users"
+                Height="175"
+                Width="150"/>
         </StackPanel>
     </Grid>
 </Window>

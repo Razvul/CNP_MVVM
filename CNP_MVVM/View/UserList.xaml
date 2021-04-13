@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:CNP_MVVM.View"
         mc:Ignorable="d"
         xmlns:viewModel="clr-namespace:CNP_MVVM.ViewModel"
-        Title="UserList" Height="450" Width="800">
+        Title="UserList" Height="500" Width="800" Loaded="Window_Loaded">
 
     <Window.Resources>
         <viewModel:CNPViewModel x:Key="CNPViewModel"/>
@@ -24,7 +24,9 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <GroupBox 
+        <GroupBox
+            x:Name="Group_Person"
+            Header="Person"
             Grid.Column="0">
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -102,9 +104,12 @@
             </Grid>
         </GroupBox>
 
-        <GroupBox Grid.Row="0"
-                  Grid.Column="1" 
-                  Grid.RowSpan="2">
+        <GroupBox 
+            x:Name="Group_Address"
+            Header="Address"
+            Grid.Row="0"
+            Grid.Column="1" 
+            Grid.RowSpan="2">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -232,20 +237,23 @@
             HorizontalAlignment="Center" 
             VerticalAlignment="Center">
             <Button
-                    x:Name="Button_Add"  
-                    Content="Add User" 
-                    Width="90"  
-                    Height="25"/>
+                x:Name="Button_Add"
+                Content="Add User"
+                Width="90"
+                Height="25"
+                Click="Button_Add_Click"/>
             <Button
-                    x:Name="Button_Update" 
-                    Content="Update User" 
-                    Width="90" 
-                    Height="25"/>
-            <Button 
-                    x:Name="Button_Delete"  
-                    Content="Delete User" 
-                    Width="90" 
-                    Height="25"/>
+                x:Name="Button_Update"
+                Content="Update User"
+                Width="90"
+                Height="25"
+                Click="Button_Update_Click"/>
+            <Button
+                x:Name="Button_Delete"
+                Content="Delete User"
+                Width="90"
+                Height="25"
+                Click="Button_Delete_Click"/>
         </StackPanel>
     </Grid>
 </Window>
