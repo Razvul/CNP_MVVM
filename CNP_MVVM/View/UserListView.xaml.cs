@@ -84,34 +84,34 @@ namespace CNP_MVVM.View
         {
             ComboBox_Sex.ItemsSource = Enum.GetValues(typeof(GenderEnums));
 
-            if (_user.Person.Sex == GenderEnums.Masculin)
-            {
-                ComboBox_Sex.SelectedIndex = 0;
-            }
-            else
+            if (_user?.Person.Sex == GenderEnums.Feminin)
             {
                 ComboBox_Sex.SelectedIndex = 1;
             }
+            else
+            {
+                ComboBox_Sex.SelectedIndex = 0;
+            }
 
-            TextBox_ID.Text = $"{_user.Id}";
-            TextBox_Nume.Text = $"{_user.Person.Nume}";
-            TextBox_Prenume.Text = $"{_user.Person.Prenume}";
-            TextBox_CNP.Text = $"{_user.Person.CNP}" == "0" ? "" : $"{_user.Person.CNP}";
-            TextBox_Oras.Text = $"{_user.Address.Oras}";
-            TextBox_Strada.Text = $"{_user.Address.Strada}";
-            TextBox_Numar.Text = $"{_user.Address.Numar}" == "0" ? "" : $"{_user.Address.Numar}";
-            TextBox_Bloc.Text = $"{_user.Address.Bloc}";
-            TextBox_Scara.Text = $"{_user.Address.Scara}";
-            TextBox_Etaj.Text = $"{_user.Address.Etaj}" == "0" ? "" : $"{_user.Address.Etaj}";
-            TextBox_Apartament.Text = $"{_user.Address.Apartament}" == "0" ? "" : $"{_user.Address.Apartament}";
-            TextBox_Judet.Text = $"{_user.Address.Judet}";
-            TextBox_CodPostal.Text = $"{_user.Address.CodPostal}" == "0" ? "" : $"{_user.Address.CodPostal}";
+            TextBox_ID.Text = $"{_user?.Id}";
+            TextBox_Nume.Text = $"{_user?.Person.Nume}";
+            TextBox_Prenume.Text = $"{_user?.Person.Prenume}";
+            TextBox_CNP.Text = $"{_user?.Person.CNP}" == "0" ? "" : $"{_user?.Person.CNP}";
+            TextBox_Oras.Text = $"{_user?.Address.Oras}";
+            TextBox_Strada.Text = $"{_user?.Address.Strada}";
+            TextBox_Numar.Text = $"{_user?.Address.Numar}" == "0" ? "" : $"{_user?.Address.Numar}";
+            TextBox_Bloc.Text = $"{_user?.Address.Bloc}";
+            TextBox_Scara.Text = $"{_user?.Address.Scara}";
+            TextBox_Etaj.Text = $"{_user?.Address.Etaj}" == "0" ? "" : $"{_user?.Address.Etaj}";
+            TextBox_Apartament.Text = $"{_user?.Address.Apartament}" == "0" ? "" : $"{_user?.Address.Apartament}";
+            TextBox_Judet.Text = $"{_user?.Address.Judet}";
+            TextBox_CodPostal.Text = $"{_user?.Address.CodPostal}" == "0" ? "" : $"{_user?.Address.CodPostal}";
         }
 
         private void PopulateNewUser()
         {
             ComboBox_Sex.ItemsSource = Enum.GetValues(typeof(GenderEnums));
-            ComboBox_Sex.SelectedIndex = 0;
+            ComboBox_Sex.SelectedIndex = 1;
 
             TextBox_ID.Text = $"{_user.Id}";
             TextBox_Nume.Text = string.Empty;
