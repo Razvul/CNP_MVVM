@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.IO;
+using CNP_MVVM.Model;
 
 namespace CNP_MVVM.Utilities
 {

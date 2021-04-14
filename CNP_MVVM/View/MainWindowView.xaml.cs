@@ -20,11 +20,11 @@ namespace CNP_MVVM
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindowView : Window
     {
         private UserDatabase _userDatabase = UserDatabase.GetInstance();
 
-        public MainWindow()
+        public MainWindowView()
         {
             InitializeComponent();
         }

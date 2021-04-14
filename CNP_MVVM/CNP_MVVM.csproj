@@ -74,22 +74,21 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Command\AddPersonCommand.cs" />
+    <Compile Include="Model\AddressClass.cs" />
     <Compile Include="Model\CNP.cs" />
     <Compile Include="Model\CustomDate.cs" />
-    <Compile Include="Model\UserList.cs" />
-    <Compile Include="Utilities\AddressClass.cs" />
+    <Compile Include="Model\PersonClass.cs" />
+    <Compile Include="Model\User.cs" />
     <Compile Include="Utilities\Enums_old.cs" />
     <Compile Include="Utilities\CustomEnums.cs" />
-    <Compile Include="Utilities\PersonClass.cs" />
-    <Compile Include="Utilities\User.cs" />
     <Compile Include="Utilities\UserDatabase.cs" />
     <Compile Include="Utilities\Utility.cs" />
     <Compile Include="ViewModel\CNPViewModel.cs" />
     <Compile Include="ViewModel\CustomDateViewModel.cs" />
     <Compile Include="ViewModel\PersonViewModel.cs" />
-    <Compile Include="ViewModel\UserListViewModel.cs" />
-    <Compile Include="View\UserListView.xaml.cs">
-      <DependentUpon>UserListView.xaml</DependentUpon>
+    <Compile Include="ViewModel\UserViewModel.cs" />
+    <Compile Include="View\UserView.xaml.cs">
+      <DependentUpon>UserView.xaml</DependentUpon>
     </Compile>
     <Page Include="View\CustomDateView.xaml">
       <SubType>Designer</SubType>
@@ -99,7 +98,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\MainWindow.xaml">
+    <Page Include="View\MainWindowView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -113,11 +112,11 @@
     <Compile Include="View\PersonView.xaml.cs">
       <DependentUpon>PersonView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="View\MainWindowView.xaml.cs">
+      <DependentUpon>MainWindowView.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="View\UserListView.xaml">
+    <Page Include="View\UserView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using CNP_MVVM.Model;
 using CNP_MVVM.Utilities;
 using Newtonsoft.Json;
 

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CNP_MVVM.Utilities
+namespace CNP_MVVM.Model
 {
     public class User
     {

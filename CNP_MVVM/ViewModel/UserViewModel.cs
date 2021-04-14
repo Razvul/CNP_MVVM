@@ -12,17 +12,17 @@ using System.ComponentModel;
 
 namespace CNP_MVVM.ViewModel
 {
-    class UserListViewModel : INotifyPropertyChanged
+    public class UserViewModel : INotifyPropertyChanged
     {
-        private UserList _userList;
+        private User _user;
 
-        public UserList UserList
+        public User User
         {
-            get { return _userList; }
+            get { return _user; }
             set
             {
-                _userList = value;
-                OnPropertyChanged(nameof(UserList));
+                _user = value;
+                OnPropertyChanged(nameof(User));
             }
         }
 

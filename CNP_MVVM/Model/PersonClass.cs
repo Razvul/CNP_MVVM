@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CNP_MVVM.Utilities;
 
-namespace CNP_MVVM.Utilities
+namespace CNP_MVVM.Model
 {
     public class PersonClass
     {
