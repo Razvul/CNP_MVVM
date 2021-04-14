@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CNP_MVVM.Model;
 using CNP_MVVM.View;
 using CNP_MVVM.Utilities;
 
@@ -44,14 +45,14 @@ namespace CNP_MVVM
 
         private void Buton_Adauga_Click(object sender, RoutedEventArgs e)
         {
-            var h = new UserList();
+            var h = new UserView();
             h.ShowDialog();
         }
 
         private void Buton_Detalii_Click(object sender, RoutedEventArgs e)
         {
             var SelectedUser = (User)listBox_Users.SelectedItem;
-            var gg = new UserList(SelectedUser);
+            var gg = new UserView(SelectedUser);
             gg.ShowDialog();
         }
         #endregion

@@ -21,13 +21,13 @@ namespace CNP_MVVM.View
     /// <summary>
     /// Interaction logic for UserList.xaml
     /// </summary>
-    public partial class UserList : Window
+    public partial class UserView : Window
     {
         private User _user;
         private readonly UserDatabase _userDatabase = UserDatabase.GetInstance();
         private readonly bool _isNewUser = false;
 
-        public UserList(User utilizator)
+        public UserView(User utilizator)
         {
             InitializeComponent();
             _user = utilizator;
@@ -35,7 +35,7 @@ namespace CNP_MVVM.View
             this.DataContext = DataContext;
         }
 
-        public UserList()
+        public UserView()
         {
             InitializeComponent();
             _isNewUser = true;
