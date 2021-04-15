@@ -52,6 +52,7 @@
 
             <ListBox
                 x:Name="ListBox_Users"
+                ItemsSource="{Binding Source={StaticResource MainWindowViewModel}, Path=ListaUser}"
                 Height="175"
                 Width="150"/>
         </StackPanel>
