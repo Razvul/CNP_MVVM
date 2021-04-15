@@ -14,8 +14,22 @@ namespace CNP_MVVM.ViewModel
 {
     public class UserViewModel : INotifyPropertyChanged
     {
-        private User _user;
+        public UserViewModel()
+        {
+            _user = new User
+            {
+                Id="1573",
+                Person=new PersonClass
+                {
+                    Nume="matrggfe",
+                    Prenume="htrd",
+                    CNP=1234456
+                },
+            };
+        }
 
+        private User _user;
+        
         public User User
         {
             get { return _user; }

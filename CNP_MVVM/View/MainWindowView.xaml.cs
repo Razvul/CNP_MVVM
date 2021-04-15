@@ -23,7 +23,7 @@ namespace CNP_MVVM
     /// </summary>
     public partial class MainWindowView : Window
     {
-        private UserDatabase _userDatabase = UserDatabase.GetInstance();
+        private readonly UserDatabase _userDatabase = UserDatabase.GetInstance();
 
         public MainWindowView()
         {
@@ -51,7 +51,7 @@ namespace CNP_MVVM
 
         private void Buton_Detalii_Click(object sender, RoutedEventArgs e)
         {
-            var SelectedUser = (User)listBox_Users.SelectedItem;
+            var SelectedUser = (User)ListBox_Users.SelectedItem;
             var gg = new UserView(SelectedUser);
             gg.ShowDialog();
         }

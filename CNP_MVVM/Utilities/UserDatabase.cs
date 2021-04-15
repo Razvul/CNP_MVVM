@@ -39,7 +39,7 @@ namespace CNP_MVVM.Utilities
             }//inchide fisierul
         }
 
-        public bool AddUser(User user)// sa returneze un boolean
+        public bool AddUser(User user)
         {
             try
             {
