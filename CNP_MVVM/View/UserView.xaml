@@ -12,7 +12,7 @@
         <viewModel:CNPViewModel x:Key="CNPViewModel"/>
         <viewModel:UserViewModel x:Key="UserViewModel"/>
     </Window.Resources>
-
+    
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>

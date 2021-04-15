@@ -45,22 +45,22 @@ namespace CNP_MVVM.View
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            if (_isNewUser)
-            {
-                _user = new User()
-                {
-                    Id = Utility.GetNewId().ToString(),
-                    Person = new PersonClass(),
-                    Address = new AddressClass()
-                };
+            //if (_isNewUser)
+            //{
+            //    _user = new User()
+            //    {
+            //        Id = Utility.GetNewId().ToString(),
+            //        Person = new PersonClass(),
+            //        Address = new AddressClass()
+            //    };
 
-                PopulateNewUser();
-            }
-            else
-            {
-                Populate();
-            }
-            TextBox_ID.IsEnabled = false;
+            //    PopulateNewUser();
+            //}
+            //else
+            //{
+            //    Populate();
+            //}
+            //TextBox_ID.IsEnabled = false;
         }
 
         #region Butoane

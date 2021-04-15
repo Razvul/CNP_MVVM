@@ -25,6 +25,11 @@ namespace CNP_MVVM.ViewModel
                     Prenume="htrd",
                     CNP=1234456
                 },
+                Address=new AddressClass
+                {
+                    Oras="orgrimar",
+                    Apartament=2
+                }
             };
         }
 
