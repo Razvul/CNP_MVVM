@@ -42,7 +42,7 @@ namespace CNP_MVVM.ViewModel
             set
             {
                 _persons = value;
-                OnPropertyChanged("Persons");
+                OnPropertyChanged(nameof(Persons));
             }
         }
         #endregion
@@ -62,17 +62,17 @@ namespace CNP_MVVM.ViewModel
             }
         }
 
-        //private ICommand _deletePersonCommand;
+        private ICommand _deletePersonCommand;
 
-        //public ICommand DeletePersonCommand
-        //{
-        //    get
-        //    {
-        //        Persons.Remove(DeletePersonCommand);
-        //        return _deletePersonCommand;
-        //    }
-        //   // set { _deletePersonCommand = value; }
-        //}
+        public ICommand DeletePersonCommand
+        {
+            get
+            {
+                Persons.Remove(Person);
+                return _deletePersonCommand;
+            }
+            set { _deletePersonCommand = value; }
+        }
 
 
         private void AddPersonExecute(object parameter)
@@ -80,7 +80,7 @@ namespace CNP_MVVM.ViewModel
             Persons.Add(Person);
         }
 
-        private void DeletePerson(object parameter)
+        private void DeletePersonExecute(object parameter)
         {
             Persons.Remove(Person);
         }

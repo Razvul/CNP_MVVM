@@ -27,11 +27,13 @@ namespace CNP_MVVM.ViewModel
                 OnPropertyChanged(nameof(Cautare));
             }
         }
+       
 
         public ObservableCollection<string> Test()
         {
             var userlist= _userDatabase.GetUserList();
             var a = new ObservableCollection<string>();
+            
 
             foreach (var user in userlist.OrderBy(d=>d.Person.Nume))
             {
