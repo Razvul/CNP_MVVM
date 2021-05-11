@@ -3,14 +3,14 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:CNP_MVVM.View"
-        mc:Ignorable="d"
-        xmlns:viewModel="clr-namespace:CNP_MVVM.ViewModel"
+        xmlns:local="clr-namespace:CNP_MVVM.Command" mc:Ignorable="d"
+        xmlns:viewModel="clr-namespace:CNP_MVVM.ViewModel" d:DataContext="{d:DesignInstance Type=viewModel:UserViewModel}"
         Title="User" Height="500" Width="800" Loaded="Window_Loaded">
 
     <Window.Resources>
         <viewModel:CNPViewModel x:Key="CNPViewModel"/>
         <viewModel:UserViewModel x:Key="UserViewModel"/>
+        <viewModel:PersonViewModel x:Key="PersonViewModel"/>
     </Window.Resources>
     
     <Grid>
@@ -55,7 +55,7 @@
                     Grid.Row="0" 
                     Height="25" 
                     Margin="0" 
-                    Text="{Binding Source={StaticResource UserViewModel}, Path=User.Id}"
+                    Text="{Binding Path=User.Id}"
                     Width="120"/>
                 <Label 
                     x:Name="Label_Nume" 
@@ -68,7 +68,7 @@
                     Grid.Row="1" 
                     Height="25" 
                     Width="120"
-                    Text="{Binding Source={StaticResource UserViewModel}, Path=User.Person.Nume}"
+                    Text="{Binding Path=User.Person.Nume}"
                     TextWrapping="Wrap"/>
                 <Label
                     x:Name="Label_Prenume" 
@@ -80,7 +80,7 @@
                     Grid.Column="2" 
                     Grid.Row="2" 
                     Height="25"
-                    Text="{Binding Source={StaticResource UserViewModel}, Path=User.Person.Prenume}"
+                    Text="{Binding Path=User.Person.Prenume}"
                     Width="120"/>
                 <Label  
                     x:Name="Label_Sex" 
@@ -103,7 +103,7 @@
                     x:Name="TextBox_CNP" 
                     Grid.Column="2" 
                     Grid.Row="4"
-                    Text="{Binding Source={StaticResource UserViewModel}, Path=User.Person.CNP}"
+                    Text="{Binding Path=User.Person.CNP}"
                     Height="25" 
                     Width="120"/>
             </Grid>
@@ -115,7 +115,7 @@
             Grid.Row="0"
             Grid.Column="1" 
             Grid.RowSpan="2">
-            <Grid>
+            <Grid DataContext="{Binding Source={StaticResource UserViewModel}}">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
@@ -142,7 +142,7 @@
                     x:Name="TextBox_Oras"  
                     Height="25"  
                     Width="120" 
-                    Text="{Binding Source={StaticResource UserViewModel}, Path=User.Address.Oras}"
+                    Text="{Binding Path=User.Address.Oras}"
                     Grid.Row="0" 
                     Grid.Column="1"/>
                 <Label
@@ -154,7 +154,7 @@
                     x:Name="TextBox_Strada" 
                     Height="25" 
                     Width="120" 
-                    Text="{Binding Source={StaticResource UserViewModel}, Path=User.Address.Strada}"
+                    Text="{Binding Path=User.Address.Strada}"
                     Grid.Row="1" 
                     Grid.Column="1"/>
                 <Label
@@ -166,7 +166,7 @@
                     x:Name="TextBox_Numar"  
                     Height="25" 
                     Width="120"
-                    Text="{Binding Source={StaticResource UserViewModel}, Path=User.Address.Numar}"
+                    Text="{Binding Path=User.Address.Numar}"
                     Grid.Row="2" 
                     Grid.Column="1"/>
                 <Label  
@@ -178,7 +178,7 @@
                     x:Name="TextBox_Bloc"  
                     Height="25" 
                     Width="120"
-                    Text="{Binding Source={StaticResource UserViewModel}, Path=User.Address.Bloc}"
+                    Text="{Binding Path=User.Address.Bloc}"
                     Grid.Row="3" 
                     Grid.Column="1"/>
                 <Label
@@ -190,7 +190,7 @@
                     x:Name="TextBox_Scara"  
                     Height="25" 
                     Width="120"
-                    Text="{Binding Source={StaticResource UserViewModel}, Path=User.Address.Scara}"
+                    Text="{Binding Path=User.Address.Scara}"
                     Grid.Row="4" 
                     Grid.Column="1"/>
                 <Label
@@ -202,7 +202,7 @@
                     x:Name="TextBox_Etaj"  
                     Height="25" 
                     Width="120"
-                    Text="{Binding Source={StaticResource UserViewModel}, Path=User.Address.Etaj}"
+                    Text="{Binding Path=User.Address.Etaj}"
                     Grid.Row="5" 
                     Grid.Column="1"/>
                 <Label 
@@ -214,7 +214,7 @@
                     x:Name="TextBox_Apartament"  
                     Height="25"  
                     Width="120"
-                    Text="{Binding Source={StaticResource UserViewModel}, Path=User.Address.Apartament}"
+                    Text="{Binding Path=User.Address.Apartament}"
                     Grid.Row="6" 
                     Grid.Column="1"/>
                 <Label
@@ -226,7 +226,7 @@
                     x:Name="TextBox_Judet"
                     Height="25" 
                     Width="120"
-                    Text="{Binding Source={StaticResource UserViewModel}, Path=User.Address.Judet}"
+                    Text="{Binding Path=User.Address.Judet}"
                     Grid.Row="7" 
                     Grid.Column="1"/>
                 <Label
@@ -238,7 +238,7 @@
                     x:Name="TextBox_CodPostal" 
                     Height="25" 
                     Width="120"
-                    Text="{Binding Source={StaticResource UserViewModel}, Path=User.Address.CodPostal}"
+                    Text="{Binding Path=User.Address.CodPostal}"
                     Grid.Row="8" 
                     Grid.Column="1"/>
             </Grid>
@@ -267,6 +267,7 @@
                 Content="Delete User"
                 Width="90"
                 Height="25"
+                Command="{Binding Source={StaticResource PersonViewModel}, Path=DeletePersonCommand}"
                 Click="Button_Delete_Click"/>
         </StackPanel>
     </Grid>

@@ -55,9 +55,14 @@
     <Button Content="Add Person"
             Command="{Binding AddPersonCommand}"
             HorizontalAlignment="Center"
+            Width="100"
+            Height="30"
             Grid.Row="4"
             Grid.Column="1" />
     <Button Content="Delete Person"
+            VerticalAlignment="Top"
+            Width="100"
+            Height="30"
             Grid.Row="5"
             Grid.Column="1"/>
     <ComboBox Grid.Row="3"
